@@ -38,7 +38,7 @@ The Local Artisan Marketplace is a web-based platform designed to simulate a mar
 ### Steps:
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/local-artisan-marketplace.git
+   git clone https://github.com/chetanK28/LocalArtisians.git
    cd local-artisan-marketplace
    ```
 
