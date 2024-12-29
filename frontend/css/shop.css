@@ -1,0 +1,168 @@
+/* styles.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.header {
+    background-color: #333;
+    padding: 15px;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    background-color: white; /* White background for highlight */
+    padding: 10px; /* Space around the logo image */
+    border-radius: 5px; /* Rounded corners for a smoother look */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for a subtle highlight */
+    display: inline-block; /* Ensures the logo has a defined box for styling */
+}
+
+.logo img {
+    width: 100px; /* Adjusts the logo image size */
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    background-color: #555;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.tab {
+    padding: 10px 20px;
+}
+
+.tab.active {
+    background-color: #333;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Remove underline for all links inside .tabs */
+.tabs a {
+    text-decoration: none;
+}
+
+/* Style for tabs */
+.tabs .tab {
+    font-size: 1.5em; /* Increase font size */
+    color: #ffffff; /* Default color */
+    padding: 10px 20px;
+    margin: 5px;
+    text-align: center;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Style for hover effect */
+.tabs .tab:hover {
+    color: white; /* Text color on hover */
+    background-color: #007bff; /* Background color on hover */
+}
+
+/* Active tab styling */
+.tabs .tab.active {
+    color: white; /* Active text color */
+    background-color: #007bff; /* Active background color */
+    font-weight: bold; /* Make the active tab bold */
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.product {
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s ease; /* Scale effect on hover */
+}
+
+.product:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+}
+
+
+.product h3 {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+}
+
+.product button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.product button:hover {
+    background-color: #0056b3;
+}

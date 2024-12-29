@@ -1,0 +1,221 @@
+/* login page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    width: 120px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-section {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.login-container {
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+}
+
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    padding: 12px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+.forgot-password {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+    margin: 0 auto 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+footer h5 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+}
+
+#newsletter-form {
+    display: flex;
+    gap: 5px;
+}
+
+#newsletter-form input {
+    padding: 8px;
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#newsletter-form button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+/* register page */
+.register-section {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.register-container {
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.register-container h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.register-container .subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+#register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#register-form label {
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+}
+
+#register-form input[type="text"],
+#register-form input[type="email"],
+#register-form input[type="password"] {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#register-form button[type="submit"] {
+    padding: 12px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#register-form button[type="submit"]:hover {
+    background-color: #555;
+}

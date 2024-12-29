@@ -1,0 +1,22 @@
+my_project/
+├── backend/
+│   ├── config/
+│   │   └── db.js                   # Database configuration (MySQL connection)
+│   ├── controllers/
+│   │   └── checkoutController.js   # Logic for handling checkout
+│   ├── models/
+│   │   └── cartModel.js            # Model for database CRUD operations
+│   ├── routes/
+│   │   └── apiRoutes.js            # API routes
+│   ├── app.js                      # Main Express server file
+│   └── package.json                # Node dependencies
+├── frontend/
+│   ├── css/
+│   │   └─  style.css               # Stylesheet
+│   ├── html/
+│   │   ├── index.html              # Homepage
+│   │   ├── shop.html               # Shop page with products
+│   │   └── cart.html               # Cart page
+│   ├── js/
+│   │   └── app.js                  # Frontend JavaScript
+└── README.md                       # Project documentation

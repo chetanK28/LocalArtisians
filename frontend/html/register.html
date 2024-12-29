@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direct Create Register - Join the handmade world</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/frontend/css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <a href="/frontend/html/index.html">
+                <img src="https://www.directcreate.com/img/direct-create-logo.png" alt="DirectCreate Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/frontend/html/shop.html">Shop</a></li>
+                <li><a href="/frontend/html/discover.html">Discover</a></li>
+                <li><a href="/frontend/html/collaborateform.html">Collaborate</a></li>
+                <li><a href="/frontend/html/login.html">Login</a></li>
+            </ul>   
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="register-section">
+        <div class="register-container">
+            <h1>Direct Create Register - Join the handmade world</h1>
+            <p class="subtitle">Become a part of our community!</p>
+            <form id="register-form" action="/register" method="post">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+
+                <button type="submit"><a href="/frontend/html/login.html">Create Account</a></button>
+
+                <p>Already have an account? <a href="/frontend/html/login.html">Login here</a></p>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-top">
+        <div>
+            <h5>Sign up for our newsletter</h5>
+            <form id="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">→</button>
+            </form>
+        </div>
+        <div>
+            <h5>Need Help?</h5>
+            <p><a href="tel:+917042084956">Call us</a> or <a href="mailto:contact@directcreate.com">Write to us</a></p>
+        </div>
+    </div>
+    <p>© 2024 DirectCreate. All Rights Reserved.</p>
+</footer>
+
+<script src="/frontend/javascript/script.js"></script>
+</body>
+</html>

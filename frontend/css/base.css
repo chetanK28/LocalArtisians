@@ -1,0 +1,306 @@
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 72px;
+    z-index: 99;
+    color: #fefefe;
+    padding-top: 10px;
+    transition: all .25s ease-in-out;
+}
+
+header .siteNav {
+    z-index: 9;
+    position: fixed;
+    top: 11px;
+    left: 15px;
+    height: 32px;
+    width: 32px;
+    display: inline-block;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+header .siteNav span {
+    position: absolute;
+    height: 18px;
+    width: 20px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-top: 1.5px solid #fefefe;
+    border-bottom: 1.5px solid #fefefe;
+}
+
+header .siteNav span:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    top: 6px;
+    left: 0;
+    background-color: #fefefe;
+}
+
+header .siteNav.active span {
+    border-bottom: 0;
+    border-color: #5a5a5a;
+    transform: rotate(-45deg);
+    top: 14px;
+    left: 11px;
+}
+
+header .siteNav.active span:after {
+    top: -2px;
+    width: 100%;
+    height: 2.4px;
+    transform: rotate(90deg);
+    background-color: #5a5a5a;
+}
+
+header .brandLogo {
+    display: inline-block;
+    height: 48px;
+    width: 48px;
+    position: relative;
+    text-indent: -9999em;
+}
+
+header .brandLogo:before,
+header .brandLogo:after {
+    background-color: #fefefe;
+    position: absolute;
+    content: '';
+}
+
+header .brandLogo:before {
+    height: 72%;
+    width: 55%;
+    left: 0;
+    top: 0;
+    border-radius: 0 100px 100px 0;
+}
+
+header .brandLogo:after {
+    height: 69%;
+    width: 42%;
+    right: 20%;
+    bottom: -8%;
+    border-radius: 100px 0 0 100px;
+}
+
+header .brandLogo img {
+    width: 38px;
+    height: auto;
+}
+
+header .brandLogo.affixlogo {
+    position: absolute;
+    left: 50px;
+    top: -6px;
+    display: none;
+    transform: scale(0.65);
+}
+
+header .rgtNav {
+    position: relative;
+    top: 0;
+}
+
+header .topSocialLink {
+    display: none;
+}
+
+header .topSocialWrap ul {
+    padding-right: 15px;
+}
+
+header .topSocialWrap ul li {
+    display: inline-block;
+    text-align: center;
+}
+
+header .topSocialWrap ul li a {
+    display: block;
+    height: 36px;
+    width: 36px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 44%;
+    text-transform: uppercase;
+    transition: all .25s ease;
+}
+
+header .topSocialWrap ul li a.facebook {
+    background-image: url("https://no-image-bucket.s3.ap-south-1.amazonaws.com/facebook.png");
+}
+
+header .topSocialWrap ul li a.twitter {
+    background-image: url("https://no-image-bucket.s3.ap-south-1.amazonaws.com/twitter.png");
+}
+
+header .topSocialWrap ul li a.linkedin {
+    background-image: url("https://no-image-bucket.s3.ap-south-1.amazonaws.com/linkedin.png");
+}
+
+header .topSocialWrap ul li a.instagram {
+    background-image: url("https://no-image-bucket.s3.ap-south-1.amazonaws.com/instagram.png");
+}
+
+header .topSocialWrap ul li a.email {
+    background-image: url("https://no-image-bucket.s3.ap-south-1.amazonaws.com/email.png");
+}
+
+header.schDisp {
+    height: 56px;
+    background-color: #010001;
+}
+
+header.schDisp .brandLogo {
+    display: none;
+}
+
+header.schDisp .brandLogo.affixlogo {
+    display: block;
+}
+
+header.transeMe {
+    background-color: transparent;
+}
+
+.navWrap {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 90;
+    display: none;
+    background-color: #fefefe;
+}
+
+.navWrap .navCnt {
+    position: absolute;
+    left: 15px;
+    width: calc(100% - 30px);
+    top: 50px;
+    height: calc(100% - 50px);
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.navTop {
+    margin-top: 15px;
+}
+
+.navTop li a,
+.navTop li button[type=submit] {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2.75rem;
+    color: #5a5a5a;
+    display: inline-block;
+    padding: 12px 0;
+    letter-spacing: 0;
+    transition: all .25s ease;
+    text-decoration: none;
+}
+
+.navTop li a:hover,
+.navTop li button[type=submit]:hover {
+    color: rgba(90, 90, 90, 0.5);
+    letter-spacing: 0.5em;
+}
+
+.lbLink {
+    font-family: "Libre Baskerville";
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    padding: 12px 0;
+    font-size: 1.55rem;
+}
+
+.lbLink.white {
+    color: #fefefe;
+}
+
+.lbLink:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 8px;
+    width: 100%;
+    height: 1px;
+    background-color: #fefefe;
+}
+
+/* logo  */
+.leftTitle {
+    display: flex;
+    align-items: center; /* Aligns the circle and text vertically */
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border: 1px dashed #5a5a5a;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px; /* Space between icon and text */
+    animation: rotate 5s linear infinite; /* Optional rotation */
+}
+
+.circle img {
+    width: 24px; /* Adjust icon size */
+    height: 24px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers the text vertically */
+    line-height: 1.2; /* Adjust line height for tighter spacing */
+}
+
+.secHead, .secdesc {
+    font-family: Arial, sans-serif;
+    color: #5a5a5a;
+    margin: 0;
+}
+
+.secHead {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.secdesc {
+    font-size: 12px;
+    color: #5a5a5a;
+    margin-top: 2px; /* Adjust spacing between lines */
+}
+
+/* Keyframes for rotating animation */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.milanHandBook {
+    background-image: url('https://d1gryze8hyg84d.cloudfront.net/new-craft-100.jpg');
+    width: 320px;
+    height: 76px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Explore and Learn</title>
+    <link rel="stylesheet" href="/frontend/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900|Libre+Baskerville:400,400i,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="/frontend/html/index.html">
+                    <img src="https://www.directcreate.com/img/direct-create-logo.png" alt="Direct Create">
+                </a>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="/frontend/html/shop.html">Shop</a></li>
+                    <li><a href="/frontend/html/discover.html">Discover</a></li>
+                    <li><a href="/frontend/html/collaborate.html">Collaborate</a></li>
+                    <li><a href="/frontend/html/login.html">Login</a></li>
+                    <li><a href="/frontend/html/cart.html">Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Our Products</h1>
+        <div class="products">
+            <div class="product">
+                <img src="/frontend/images/image1.webp" alt="Mitti Ka Tawa">
+                <h3>Mitti Ka Tawa (With Stand)</h3>
+                <p>₹400</p>
+                <button onclick="addToCart(1, 'Mitti Ka Tawa', 400)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="/frontend/images/sachii011.webp" alt="Longpi Black Pottery Chakrateapot Plain">
+                <h3>Longpi Black Pottery Chakrateapot Plain</h3>
+                <p>₹4000</p>
+                <button onclick="addToCart(2, 'Longpi Black Pottery Chakrateapot', 4000)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="/frontend/images/image3.png" alt="Longpi Black Pottery Beer Mug Large">
+                <h3>Longpi Black Pottery Beer Mug Large</h3>
+                <p>₹1000</p>
+                <button onclick="addToCart(3, 'Longpi Black Pottery Beer Mug', 1000)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="/frontend/images/image4.jpg" alt="Kirigiti's Grey White Striped Hand Embroidered Cotton Saree">
+                <h3>Kirigiti's Grey White Striped Hand Embroidered Cotton Saree</h3>
+                <p>₹10000</p>
+                <button onclick="addToCart(4, 'Kirigiti Grey White Striped Hand Embroidered Cotton Saree', 10000)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="/frontend/images/image5.png" alt="Pulla Wool Mojri">
+                <h3>Pulla Wool Mojri</h3>
+                <p>₹7000</p>
+                <button onclick="addToCart(5, 'Pulla Wool Mojri', 7000)">Add to Cart</button>
+            </div>
+        </div>
+
+        <script>
+            async function addToCart(productId, productName, price) {
+                const userId = 1; // Replace with actual user ID if available
+
+                try {
+                    const response = await fetch("http://localhost:3002/api/cart", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ userId, productId, productName, price, quantity: 1 })
+                    });
+
+                    if (response.ok) {
+                        alert("Item added to cart!");
+                    } else {
+                        alert("Failed to add item to cart.");
+                    }
+                } catch (error) {
+                    console.error("Error adding item to cart:", error);
+                }
+            }
+        </script>
+    </main>
+</body>
+
+</html>

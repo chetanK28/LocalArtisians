@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="/frontend/css/payment.css">
+    <script src="/frontend/javascript/cart.js"></script> 
+</head>
+
+<body>
+    <header>
+        <h1>Complete Your Payment</h1>
+    </header>
+
+    <main>
+        <p>Thank you for shopping with us! Please click the button below to complete your payment.</p>
+        <button onclick="completePayment()">Complete Payment</button>
+    </main>
+
+    <script>
+        
+        async function completePayment() {
+            try {
+                const BASE_URL = `http://localhost:3002/api/cart/checkout`; // Replace '1' with the actual user ID
+
+                // Clear the cart after payment
+                const response = await fetch(BASE_URL, {
+                    method: "DELETE"
+                });
+
+                if (response.ok) {
+                    alert("Thank you for buying! Enjoy your day.");
+
+                    // Redirect to home or shop page after payment
+                    window.location.href = "/frontend/html/index.html";
+                } else {
+                    alert("Payment failed. Please try again.");
+                }
+            } catch (error) {
+                console.error("Error completing payment:", error);
+            }
+        }
+    </script>
+
+</body>
+
+</html>
